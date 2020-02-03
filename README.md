@@ -9,3 +9,11 @@ package. Therefore, here is an implementation of the C API
 GDALPolygonize tool. It does not keep any of the creations options
 passed to the rutine with papszOptions, and it is always using 8 point
 connectedness. I did not need to change anything.
+
+## Installation
+
+Install the current development from github via:
+
+``` r
+remotes::install_github("fcorra/GDALPolygonize")
+```
