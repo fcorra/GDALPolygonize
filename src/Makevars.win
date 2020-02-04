@@ -1,6 +1,6 @@
 #VERSION = 2.2.3
 #COMPILED_BY ?= gcc-4.6.3
-RWINLIB = ../libgdal
+RWINLIB = ../libgdal/bin
 #TARGET = lib$(subst gcc,,$(COMPILED_BY))$(R_ARCH)
 
 #PKG_CPPFLAGS =\
@@ -8,7 +8,7 @@ RWINLIB = ../libgdal
         -I$(RWINLIB)/include/geos \
         -I$(RWINLIB)/include/proj
 
-PKG_LIBS = -l$(RWINLIB)/bin
+PKG_LIBS = -l$(RWINLIB)/gdal300.dll
 #PKG_LIBS = \
         -L$(RWINLIB)/$(TARGET) \
         -L$(RWINLIB)/lib$(R_ARCH) \

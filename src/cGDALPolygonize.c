@@ -1,7 +1,4 @@
-#include "gdal.h"
-#include "ogr_api.h"
-#include "gdal_alg.h"
-#include "cpl_string.h"
+#include "gdal300.dll"
 #include <R.h>
 #include <Rinternals.h>
 #include <R_ext/Rdynload.h>
