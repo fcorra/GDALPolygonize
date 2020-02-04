@@ -12,7 +12,13 @@
 #   unlink("lib.zip")
 # }
 
-download.file("https://github.com/OSGeo/gdal/archive/master.zip", destfile = "gdal.zip", quiet = TRUE)
+# download.file("https://github.com/OSGeo/gdal/archive/master.zip", destfile = "gdal.zip", quiet = TRUE)
+# dir.create("../libgdal", showWarnings = FALSE)
+# unzip("gdal.zip", exdir = "..libgdal")
+# unlink("gdal.zip")
+
+download.file("http://download.gisinternals.com/sdk/downloads/release-1900-gdal-3-0-2-mapserver-7-4-2.zip",
+              destfile = "gdalbin.zip", quiet = TRUE)
 dir.create("../libgdal", showWarnings = FALSE)
-unzip("gdal.zip", exdir = "..libgdal")
-unlink("gdal.zip")
+unzip("gdalbin.zip", exdir = "../libgdal")
+unlink("gdalbin.zip")

@@ -8,7 +8,7 @@ RWINLIB = ../libgdal
         -I$(RWINLIB)/include/geos \
         -I$(RWINLIB)/include/proj
 
-PKG_LIBS = -l$(RWINLIB)/gdal
+PKG_LIBS = -l$(RWINLIB)/bin
 #PKG_LIBS = \
         -L$(RWINLIB)/$(TARGET) \
         -L$(RWINLIB)/lib$(R_ARCH) \
