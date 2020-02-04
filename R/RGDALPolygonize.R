@@ -1,9 +1,9 @@
 #' GDALPolygonize
 #'
-#' @description GDALPolygonize is not available in rgdal. Moreover, it is only available in C or Python. The function implements GDALPolygonize in the R environment
+#' @description The function calls the C GDALPolygonize routine. It does not overwrite. It uses always 8 point connectedness. It returns always a file in "ESRI Shapefile" format.
 #'
-#' @param input input name of raster file to polygonize
-#' @param output output name of the shape file to write
+#' @param input name/location of raster file to polygonize. Any driver included in GDAL should work.
+#' @param output name/location of the shape file to write. File extension should not be included.
 #'
 #' @return
 #' integer 0
