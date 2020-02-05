@@ -3,7 +3,6 @@
 \docType{package}
 \name{GDALPolygonize}
 \alias{GDALPolygonize}
-\alias{GDALPolygonize-package}
 \title{Import GDAL C API GDALPolygonize to R}
 \description{
 Import GDAL C API GDALPolygonize to R

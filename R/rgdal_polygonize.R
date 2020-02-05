@@ -13,6 +13,6 @@
 #' @examples
 #' NULL
 rgdal_polygonize <- function(raster, folder, layer, field){
-  .Call("gdal_polygonize", raster, folder, layer, field)
+  .Call("gdal_polygonize", raster, folder, layer, field, PACKAGE = "GDALPolygonize")
   return(0L)
 }
