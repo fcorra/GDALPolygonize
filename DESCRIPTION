@@ -16,4 +16,4 @@ Description: The package has only one function. It takes an input raster in any 
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
-RoxygenNote: 7.0.2
+RoxygenNote: 6.1.1
