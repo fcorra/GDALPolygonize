@@ -1,7 +1,7 @@
-#include "gdal/gdal_priv.h"
-#include "gdal/ogrsf_frmts.h"
-#include "gdal/gdal.h"
-#include "gdal/gdal_alg.h"
+#include "gdal_priv.h"
+#include "ogrsf_frmts.h"
+#include "gdal.h"
+#include "gdal_alg.h"
 
 int main( int argc, char *argv[])
 {
