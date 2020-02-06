@@ -4,23 +4,27 @@
 \alias{rgdal_polygonize}
 \title{GDALPolygonize in R}
 \usage{
-rgdal_polygonize(raster, folder, layer, field)
+rgdal_polygonize(raster, folder, layer, field, overwrite = TRUE)
 }
 \arguments{
 \item{raster}{name/location of raster file to polygonize. Any driver included in GDAL should work.}
 
 \item{folder}{name/location of the shape file to write. File extension should not be included.}
 
-\item{layer}{name of the layer (.shp file) to write.}
+\item{layer}{name of the layer (.shp file) to write. Do not include de file extension.}
 
 \item{field}{name of the field that will keep the raster values.}
+
+\item{overwrite}{TRUE/FALSE to overwrite an existing file (folder).}
 }
 \value{
 integer 0
 }
 \description{
-The function calls the C GDALPolygonize routine (using C++). It does not overwrite. It uses always 8 point connectedness. It returns always a file in "ESRI Shapefile" format.
+The function calls the C GDALPolygonize routine (using C++). It does not overwrite. It uses always 8 point connectedness. It writes on disc a file in "ESRI Shapefile" format.
 }
 \examples{
-NULL
+raster <- system.file("extdata", "bigrastertest.tif", package="GDALPolygonize")
+folder <- gsub("bigrastertest.tif", "testout", raster)
+rgdal_polygonize(raster, folder, "cluster", "DN")
 }

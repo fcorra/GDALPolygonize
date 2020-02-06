@@ -13,7 +13,6 @@ for gdal/alg/polygonize.cpp). It has limitations:
 
   - It does not keep any of the creations options (I omitted the
     papszOptions argument).
-  - It does not overwrite an existing file.
   - The output is always in “ESRI Shapefile” file format.
 
 ## Windows notes

@@ -11,7 +11,6 @@ I need an utility to use GDALPolygonize in R. As far as I know the routine is no
 I made a simple implementation of the C API GDALPolygonize tool. It mimics what python gdal_polygonize.py program does (i.e. it is a wraper for gdal/alg/polygonize.cpp). It has limitations:
 
 * It does not keep any of the creations options (I omitted the papszOptions argument).
-* It does not overwrite an existing file.
 * The output is always in "ESRI Shapefile" file format.
 
 ## Windows notes
