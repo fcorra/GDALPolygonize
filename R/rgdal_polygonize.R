@@ -17,9 +17,13 @@
 #' rgdal_polygonize(raster, folder, "cluster", "DN")
 rgdal_polygonize <- function(raster, folder, layer, field, overwrite = TRUE){
 
+  if(!file.exists(raster)){
+    warning("\n Source file not found!")
+    return(1L)
+  }
+
   # check to overwrite
   dst_layer <- paste(paste(folder, layer, sep = .Platform$file.sep), ".shp", sep = "")
-
   if(file.exists(dst_layer) & overwrite){
     rmvec <- list.files(folder, pattern = layer, full.names = TRUE)
     file.remove(rmvec)

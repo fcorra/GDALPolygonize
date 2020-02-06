@@ -29,6 +29,12 @@ test_that("Check if overwrite warning is inplace",
             expect_true(out == 1L)
           })
 
+test_that("Check if missing file warning is in place",
+          {
+            expect_warning(out <- rgdal_polygonize("fake_file.tif", "foo", "foo", "foo"))
+            expect_true(out == 1L)
+          })
+
 test_that("Check output names",
           {
             folder <- system.file("extdata", "testout", package="GDALPolygonize")
